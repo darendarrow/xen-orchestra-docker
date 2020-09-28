@@ -14,7 +14,7 @@ RUN yum -y --setopt=tsflags=nodocs install yarn
 # epel-release for various packages not available from base repo
 RUN yum -y  --setopt=tsflags=nodocs install epel-release
 
-# build dependencies, git for fetching source and redis server for storing data
+# build dependencies, git for fetching source and redis server for storing data and adding deltarpm
 RUN yum -y  --setopt=tsflags=nodocs install gcc gcc-c++ make openssl openssl-devel redis libpng-devel python git nfs-utils cifs-utils deltarpm
 
 # libvhdi-tools for file-level restore
